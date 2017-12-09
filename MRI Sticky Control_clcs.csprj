@@ -1,0 +1,42 @@
+<codestructure version="5.13">
+<phptree>
+<treenode node="mri_sticky_control.functions;PHP:PHP Include;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f9;9;37;9;;;;vpos;;v;;r&#10;Description&#10;     &#10;&#10;Parameters:&#10;    undefined $path&#10;    undefined $arg;;d-1,-1;;b0,0;;m">
+</treenode>
+<treenode node="_observed_content_type_will_be_del;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;71;1;125;;;;vpos;;v;;r&#10;Definition&#10;    _observed_content_type_will_be_del($form, &amp;$form_state)&#10;&#10;Description&#10;     Implements a callback Function that will be triggerd from the node delete_confirm_alter Hook (Node edit Mask)&#10;&#10;Parameters:&#10;    undefined $form&#10;    undefined $form_state;;d65,71;;b0,0;;mundefined $form;;pundefined $form_state;;p">
+</treenode>
+<treenode node="_observed_content_type_will_be_saved;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;169;1;195;;;;vpos;;v;;r&#10;Definition&#10;    _observed_content_type_will_be_saved($form, &amp;$form_state)&#10;&#10;Description&#10;     Imoplements callback Function for _form_alter hook The _form_alter registrated a try to save a node of observed content type and calls this callback funtion.&#10;&#10;Parameters:&#10;    undefined $form&#10;    undefined $form_state;;d67,169;;b0,0;;mundefined $form;;pundefined $form_state;;p">
+</treenode>
+<treenode node="mri_sticky_control_config_form_submit;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;270;1;285;;;;vpos;;v;;r&#10;Definition&#10;    mri_sticky_control_config_form_submit($form, $form_state)&#10;&#10;Description&#10;     Submit Function handles actions if the config form was submitted&#10;&#10;Parameters:&#10;    undefined $form&#10;    undefined $form_state;;d67,270;;b0,0;;mundefined $form;;pundefined $form_state;;p">
+</treenode>
+<treenode node="mri_sticky_control_config_form_validate;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.functions;f0;69;1;71;;;;vpos;;v;;r;;d51,69;;b0,0;;m">
+</treenode>
+<treenode node="mri_sticky_control_form_alter;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;154;1;159;;;;vpos;;v;;r&#10;Definition&#10;    mri_sticky_control_form_alter(&amp;$form, $form_state, $form_id)&#10;&#10;Description&#10;     Alter Form, to set an Callback if a Node of observed Content Type is saved&#10;&#10;Parameters:&#10;    undefined $form&#10;    undefined $form_state&#10;    undefined $form_id;;d70,154;;b0,0;;mundefined $form;;pundefined $form_state;;pundefined $form_id;;p">
+</treenode>
+<treenode node="mri_sticky_control_form_conf;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;203;1;258;;;;vpos;;v;;r&#10;Definition&#10;    mri_sticky_control_form_conf($form, &amp; $form_state)&#10;&#10;Description&#10;     Implements the config form of the Module.&#10;&#10;Parameters:&#10;    undefined $form&#10;    undefined $form_state;;d60,203;;b0,0;;mundefined $form;;pundefined $form_state;;p">
+</treenode>
+<treenode node="mri_sticky_control_form_node_delete_confirm_alter;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;58;1;63;;;;vpos;;v;;r&#10;Definition&#10;    mri_sticky_control_form_node_delete_confirm_alter(&amp;$form, &amp;$form_state, $form_id)&#10;&#10;Description&#10;     //if the deleted node is the observed contenttype, then set a callback.&#10;&#10;Parameters:&#10;    undefined $form&#10;    undefined $form_state&#10;    undefined $form_id;;d91,58;;b0,0;;mundefined $form;;pundefined $form_state;;pundefined $form_id;;p">
+</treenode>
+<treenode node="mri_sticky_control_get_config_query;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.functions;f0;8;1;15;;;;vpos;;v;;r&#10;Definition&#10;    mri_sticky_control_get_config_query()&#10;&#10;Description&#10;     Get the Config Data returns the query to get the config data in table mri_sticky_conf;;d47,8;;b0,0;;m">
+</treenode>
+<treenode node="mri_sticky_control_get_observed_contenttypes;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.functions;f0;16;1;30;;;;vpos;;v;;r;;d56,16;;b0,0;;m">
+</treenode>
+<treenode node="mri_sticky_control_help;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;11;1;13;;;;vpos;;v;;r;;d46,11;;b0,0;;mpath;;parg;;p">
+</treenode>
+<treenode node="mri_sticky_control_install;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.install;f0;2;1;4;;;;vpos;;v;;r;;d37,2;;b0,0;;m">
+</treenode>
+<treenode node="mri_sticky_control_load_config_data;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;294;1;321;;;;vpos;;v;;r&#10;Definition&#10;    mri_sticky_control_load_config_data()&#10;&#10;Description&#10;     Load Config Data from DB. At first load, default Datas will be used.;;d47,294;;b0,0;;m">
+</treenode>
+<treenode node="mri_sticky_control_menu;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;38;1;49;;;;vpos;;v;;r&#10;Definition&#10;    mri_sticky_control_menu()&#10;&#10;Description&#10;     Implements Menu Entrys, and defines the path/url of the config mask.;;d35,38;;b0,0;;m">
+</treenode>
+<treenode node="mri_sticky_control_permission;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;21;1;32;;;;vpos;;v;;r&#10;Definition&#10;    mri_sticky_control_permission()&#10;&#10;Description&#10;     Implements hook _permission Set the permission entries in Backend, and make the permissions available;;d41,21;;b0,0;;m">
+</treenode>
+<treenode node="mri_sticky_control_schema;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.install;f0;15;1;87;;;;vpos;;v;;r&#10;Definition&#10;    mri_sticky_control_schema()&#10;&#10;Description&#10;     Implements hook Schema;;d36,15;;b0,0;;m">
+</treenode>
+<treenode node="mri_sticky_control_set_other_nodes_unsticky;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;127;1;145;;;;vpos;;v;;r;;d74,127;;b0,0;;mnidOfNewStickyNode;;p">
+</treenode>
+<treenode node="mri_sticky_control_uninstall;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.install;f0;6;1;8;;;;vpos;;v;;r;;d39,6;;b0,0;;m">
+</treenode>
+<treenode node="mri_sticky_control_write_conf_data;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.functions;f0;38;1;67;;;;vpos;;v;;r&#10;Definition&#10;    mri_sticky_control_write_conf_data($form_state)&#10;&#10;Description&#10;     Write Config Data from the module config Form into DB&#10;&#10;Parameters:&#10;    undefined $form_state;;d57,38;;b0,0;;mundefined $form_state;;p">
+</treenode>
+</phptree>
+</codestructure>

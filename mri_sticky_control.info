@@ -1,0 +1,9 @@
+name = MRI sticky control
+description = Allows controlling the number of Sticky Nodes per ContentType
+package = "MRI"
+project = "mri_sticky_control"
+core = 7.x
+files[] = mri_sticky_control.test
+files[] = mri_sticky_control.module
+files[] = mri_sticky_control.install
+files[] = mri_sticky_control.functions

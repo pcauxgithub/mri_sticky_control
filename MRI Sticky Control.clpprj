@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\MRI Sticky Control.clpprj">
+	<settings><PM_URL><![CDATA[webform.localhost/admin/config/sticky-control/config]]></PM_URL><PM_HOME_URL><![CDATA[webform.localhost/admin/config/sticky-control/config]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";"/><added value="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.functions;"/><lastopfiles>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\README.txt"/>
+	</lastopfiles>
+	<errors version="5.11">
+	</errors>
+	<cakedata>
+	</cakedata>
+	<dplmenupath>
+		<drupalfile name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module">
+			<pathfunc path="admin/config/sticky-control/config" data="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;mri_sticky_control_form_conf;10;39;44;39;"/>
+		</drupalfile>
+	</dplmenupath><laravael>
+	</laravael><smartyassings>
+	</smartyassings><twigtemplate>
+	</twigtemplate><yiidata>
+	</yiidata>
+	<todoblock>
+		<todofile name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module">
+			<todo name="TODO: Wenn mit mehreren Inhalstypen gearbeitet werden soll, dann wird noch eine Lösung benötigt, wie" pos="1;1"/>
+		</todofile>
+	</todoblock>
+	<filescache>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\nbproject\private\private.xml" crc="1511003803"/>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\nbproject\project.xml" crc="1511003403"/>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\README.txt" crc="1512785518"/>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module" crc="1512786559"/>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.install" crc="1512786559"/>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.info" crc="1512786559"/>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.functions" crc="1511244671"/>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\CHANGELOG.txt" crc="1512783843"/>
+	</filescache>
+</project>

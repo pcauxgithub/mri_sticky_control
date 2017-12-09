@@ -1,0 +1,88 @@
+<?php
+
+function mri_sticky_control_install(){
+
+}
+
+function mri_sticky_control_uninstall(){
+	
+}
+
+/**
+* Implements hook Schema
+* 
+* @return
+*/
+function mri_sticky_control_schema(){
+	//table for config data
+ $schema['mri_sticky_conf'] = array(
+  'description' => 'The base table for MRI Sticky Control.',
+  'fields' => array(
+    'scid' => array(
+      'description' => 'The primary identifier for a MRI Sticky Control Config Entry.',
+      'type' => 'int',
+      'length' => 4,
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 1),
+    'scct' => array(
+      'description' => 'Machine Name of the selected Content Type',
+      'type' => 'varchar',
+      'length' => 128,
+      'not null' => TRUE,
+      'default' => 'none'),   
+    'scemtype' => array(
+      'description' => 'Emergency Types are: NodeID (specify a node via id), latest content, oldest content',
+      'type' => 'varchar',
+      'length' => 64,
+      'not null' => TRUE,
+      'default' => 'none'), 
+    'scinfotype' => array(
+      'description' => 'The kind of handling if an Emergency case occurs.',
+      'type' => 'varchar',
+      'length' => 1024,
+      'not null' => TRUE,
+      'default' => 'none'), 
+    'scnid' => array(
+      'description' => 'Contains the Node ID of the Fallback sticky Node.',
+      'type' => 'int',
+      'length' => 7,
+      'not null' => TRUE,
+      'default' => '0'),
+    /*'scstickyon' => array(
+      'description' => '1 = Contains a Node of selected content type with sticky attribut on. 0 = no sticky Attribut is set.',
+      'type' => 'int',
+      'length' => 1,
+      'not null' => TRUE,
+      'default' => '0'),*/
+    ),
+  //'primary key' => array('wmaid'),
+  );
+  
+/* $schema['mri_sticky_nodes'] = array(
+  'description' => 'List of all sticky nodes of the selected content type(s), where defined in the module config mask.',
+  'fields' => array(
+    'scniid' => array(
+      'description' => 'The primary identifier for a MRI Sticky Node ID Entry.',
+      'type' => 'serial',
+      'length' => 4,
+      'unsigned' => TRUE,
+      'not null' => TRUE),
+    'scninid' => array(
+      'description' => 'Node ID of the Sticky Node',
+      'type' => 'varchar',
+      'length' => 12,
+      'not null' => TRUE,
+      'default' => 'none'),   
+    'scnitype' => array(
+      'description' => 'Machine Name of the sticky node',
+      'type' => 'varchar',
+      'length' => 128,
+      'not null' => TRUE,
+      'default' => 'none'),     
+    ),
+  'primary key' => array('scniid'),
+  );*/
+  echo "test";
+  return $schema;
+}
