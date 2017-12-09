@@ -1,0 +1,250 @@
+<?php
+//TODO: Wenn mit mehreren Inhalstypen gearbeitet werden soll, dann wird noch eine Lösung benötigt, wie die inhaltstypen gespeichert werden sollten. Die derzeitige Lösung sieht vor, alle maschinen sprachen bezeichnungen aller typen in einem datenfeld abzulegen, nämlich in scct. Komma getrennt. Geht, schöner wäre allerdings eine eigene Konfiguration pro Inhaltstyp. Das wird möglich durch einen Tuple pro CT in der Basistabelle.
+function mri_sticky_control_help($path, $arg) {
+
+}
+
+function mri_sticky_control_perm() {
+
+}
+function mri_sticky_control_form_alter(&$form, $form_state, $form_id) {
+	$observedCT = mri_sticky_control_get_observed_contenttypes();
+  if( $form_id == $observedCT. '_node_form' ) {
+    $form['actions']['submit']['#submit'][] = 'the_callback_function';
+  }
+}
+
+function the_callback_function($form, &$form_state) {
+  drupal_set_message('the_callback_function', 'status');
+	
+	$observedCT = mri_sticky_control_get_observed_contenttypes();
+	$nodeList = node_load_multiple(array(), array('type' => $observedCT, 'sticky' => '1', 'status' => '1'));
+  if ($nodeList != NULL) {
+		drupal_set_message('Sticky Nodes im System vorhanden', 'status');
+	}
+	else {
+		drupal_set_message('KEINE Sticky Nodes im System vorhanden. Deshalb wird die zuletzt bearbeitete Node auf Sticky gesetzt.', 'status');
+		//$form_state['redirect'] = 'choose/your/path';
+
+		//node_make_sticky_action($form_state['node']);
+		$node = node_load($form_state['node']->nid);
+		$node->sticky = '1';  
+		$node->status = '1';  
+    // Save the updated node
+    node_save($node);
+		echo "tt";
+	}
+}
+
+function mri_sticky_control_menu() {
+  $items['admin/config/sticky-control/config'] = array(//URL call for this form
+    'title'=> 'MRI Sticky Controller Config page',//page title
+    'description'=> 'A form to define the Sticky rules.',
+    'page callback'  => 'drupal_get_form',// function will be called when the page is accessed.
+    'page arguments' => array('mri_sticky_control_form_conf'),// form name
+    'access callback'=> TRUE,
+    'type'           => MENU_NORMAL_ITEM,
+  );
+  $items['test'] = array(//URL call for this form
+    'title'=> 'MRI Sticky Controller Config page',//page title
+    'description'=> 'A form to define the Sticky rules.',
+    'page callback'  => 'drupal_get_form',// function will be called when the page is accessed.
+    'page arguments' => array('mri_sticky_control_form_conf'),// form name
+    'access callback'=> TRUE,
+    'type'           => MENU_NORMAL_ITEM,
+  );
+  return $items;
+}
+
+
+
+function mri_sticky_control_form_conf($form, & $form_state) {
+  //TODO: Umwandlung namen von content Types in maschinensprachen namen in funktion
+  //Benötigt wird der maschinen namen der Inhaltstypen um den bezeichner in der node tabelle zu speichern.
+  //...und aus einem anderen Grund der mir gerade nicht einfällt.....
+
+  //$ct_list = mri_sticky_control_get_ctArray(); //get a list of content types human readable names
+  $ct_list = node_type_get_names();
+  $ct_list = array('none'=> 'Do nothing') + $ct_list;
+  $config_data = mri_sticky_control_load_config_data();
+  $form['content_types'] = array(
+    '#type'         => 'select',
+    '#options'      =>  $ct_list,
+    '#validated'    => TRUE,
+    '#default_value'=> $config_data['default_content_type'],
+    '#title'        => 'Content Type Sticky',
+    '#description'  => 'Choose the Content Type with min. requierement one sticky Node.',
+  );
+  $form['emergency_settings'] = array(
+    '#type'         => 'radios',
+    '#options'               =>  array(
+      'none'          => 'Do nothing',
+      'node_id'       => 'Node with a default InfoText',
+      'latest_content'=> 'Take the latest content',
+      'oldest_content'=> 'Take the oldest content'),
+    '#validated'    => TRUE,
+    '#default_value'=> $config_data['default_emg_type'],
+    '#title'        => 'Emergency Settings',
+  );
+  $form['scinfotype'] = array(
+    '#type'         => 'checkboxes',
+    '#options'               =>  array(
+      'none'               => 'Do nothing',      
+      'show_message_screen'=> 'Show a message on the screen',
+      'send_email_to_user' => 'Send a email to one, or more users',
+      'send_email_to_role' => 'Send an email to all users of a role'),
+    '#validated'    => TRUE,
+    '#default_value'=> $config_data['default_info_type'],
+    '#title'        => 'Type of Info',
+  );
+  $form['scnid'] = array(
+    '#type'         => 'textfield',
+    '#validated'    => FALSE,
+    '#default_value'=> $config_data['default_node_id'],
+    '#description'  => 'Enter the Node ID of the Fallback sticky Node.',
+    '#title'        => 'Default Sticky Node ID',
+  );
+
+  $form['save'] = array(
+    '#type'    => 'submit',
+    '#value'   =>  'Save',
+    '#submit'       =>  array('mri_sticky_control_config_form_submit'),
+    '#validate' =>  array('mri_sticky_control_config_form_validate'),
+  );
+  return $form;
+}
+
+
+
+/**
+* Submit Function handles actions if the config form was submitted
+* @param undefined $form
+* @param undefined $form_state
+*
+* @return
+*/
+
+function mri_sticky_control_config_form_submit($form, $form_state) {
+
+  if ($form_state['values']['content_types'] != 'none') {
+    //variable_set('example_ip', $form_state['values']['example_ip']);
+  }
+  else {
+    //variable_del('example_ip'); //cache Variable
+  }
+  if ($form_state['values']['emergency_settings'] == 'node_id') {
+  }
+  mri_sticky_control_write_conf_data($form_state);
+}
+
+
+//TODO: HIER WEITER: Aus der DB muss der scinfotype string geladen werden.
+//Casting in ein Array, und als "AKTIVE Werte" in der CHECKBOX anzeigen
+//ACHTUNG: Nicht Default Value, sondern eher "aktiver Value" müsste das Attribut heissen.
+
+/**
+* Load Config Data from DB.
+* At first load, default Datas will be used.
+*
+* @return
+*/
+function mri_sticky_control_load_config_data() {
+  $query = mri_sticky_control_get_config_query();
+  $result= NULL;
+  $config_settings = array();
+
+  if ($query->rowCount() != NULL) {
+    $result = $query->fetchObject();
+    $config_settings['default_emg_type'] = $result->scemtype;
+    $config_settings['default_info_type'] = $result->scinfotype;
+    $config_settings['default_node_id'] = $result->scnid;
+    $config_settings['default_content_type'] = $result->scct;
+
+    //$config_settings['default_content_type'] = mri_sticky_control_get_ctHumanName($result->scct);
+
+    $infoTypeStrg = explode(",", $config_settings['default_info_type']);
+    $config_settings['default_info_type'] = $infoTypeStrg;
+  }
+  else {
+    $config_settings = array(
+      'default_emg_type'    => 'none',//default value of the predefined encrypt method
+      'default_info_type' => array(
+        'none',
+      ),
+      'default_node_id'     => 0,
+      'default_content_type'=> 'none',
+    );
+    drupal_set_message('No Config Data available at the moment! Default Values are now activated. Please config the module in a first step, directly after Activating!', 'status');
+  }
+  return $config_settings;
+}
+
+
+/**
+* Get the Config Data
+* returns the query to get the config data in table mri_sticky_conf
+*
+* @return
+*/
+function mri_sticky_control_get_config_query() {
+  $query = db_select('mri_sticky_conf', 'mrisconf')
+  ->fields('mrisconf', array('scct','scemtype','scnid','scinfotype' ))
+  ->condition('mrisconf.scid', 1)
+  ->range(0, 1)
+  ->execute();
+  return $query;
+}
+function mri_sticky_control_get_observed_contenttypes() {
+  $result = NULL;
+  $default_content_type = NULL;
+  $query = db_select('mri_sticky_conf', 'mrisconf')
+  ->fields('mrisconf', array('scct'))
+  ->condition('mrisconf.scid', 1)
+  ->range(0, 1)
+  ->execute();
+
+  if ($query->rowCount() != NULL) {
+    $result               = $query->fetchObject();
+    $default_content_type = $result->scct;
+  }
+  return $default_content_type;
+}
+
+/**
+* Write Config Data into DB
+* @param undefined $form_state
+*
+* @return
+*/
+function mri_sticky_control_write_conf_data($form_state) {
+  $query                    = mri_sticky_control_get_config_query();
+  $checkboxOptions_infoType = implode(',' , array_filter($form_state['values']['scinfotype']));
+  $observedContentTypes     = $form_state['values']['content_types'];
+  if ($query->rowCount() > 0) {
+    db_update('mri_sticky_conf')
+    ->fields(array(
+        'scct'      => $observedContentTypes,
+        'scemtype'  => $form_state['values']['emergency_settings'],
+        'scnid'     => $form_state['values']['scnid'],
+        'scinfotype'=> $checkboxOptions_infoType,
+
+      ))
+    ->execute();
+    drupal_set_message("successfully UPDATED Settings");
+  }
+  else {
+    //Possibility to insert an custom form value.
+    db_insert('mri_sticky_conf')
+    ->fields(array(
+        'scct'      => $observedContentTypes,
+        'scemtype'  => $form_state['values']['emergency_settings'],
+        'scnid'     => $form_state['values']['scnid'],
+        'scinfotype'=> $checkboxOptions_infoType,
+      ))->execute();
+    drupal_set_message("successfully > Settings FIRST SAVE");
+  }
+}
+
+function mri_sticky_control_config_form_validate() {
+
+}

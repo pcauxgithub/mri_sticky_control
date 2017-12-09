@@ -1,0 +1,9 @@
+<?php
+
+/**
+* @file
+* Tests file for the mri_sticky_control module.
+*/
+class Mri_sticky_controlTestCase extends DrupalWebTestCase {
+	
+}

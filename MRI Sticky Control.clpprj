@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="C:\xampp\htdocs\sticky.mri.dev\sites\all\modules\mri_sticky_control\MRI Sticky Control.clpprj">
+	<settings><PM_URL><![CDATA[http://localhost:8080/sticky.mri.dev/]]></PM_URL><PM_HOME_URL><![CDATA[http://localhost:8080/sticky.mri.dev/]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";"/><added value=""/><lastopfiles>
+		<file name="C:\xampp\htdocs\sticky.mri.dev\sites\all\modules\mri_sticky_control\mri_sticky_control.module"/>
+		<file name="C:\xampp\htdocs\sticky.mri.dev\sites\all\modules\mri_sticky_control\mri_sticky_control.install"/>
+	</lastopfiles>
+	<errors version="5.11">
+	</errors>
+	<cakedata>
+	</cakedata>
+	<dplmenupath>
+		<drupalfile name="C:\xampp\htdocs\sticky.mri.dev\sites\all\modules\mri_sticky_control\mri_sticky_control.module">
+			<pathfunc path="admin/config/sticky-control/config" data="C:\xampp\htdocs\sticky.mri.dev\sites\all\modules\mri_sticky_control\mri_sticky_control.module;mri_sticky_control_form_conf;10;11;44;11;"/>
+			<pathfunc path="test" data="C:\xampp\htdocs\sticky.mri.dev\sites\all\modules\mri_sticky_control\mri_sticky_control.module;mri_sticky_control_form_conf;10;19;14;19;"/>
+		</drupalfile>
+	</dplmenupath><laravael>
+	</laravael><smartyassings>
+	</smartyassings><twigtemplate>
+	</twigtemplate><yiidata>
+	</yiidata>
+	<todoblock>
+		<todofile name="C:\xampp\htdocs\sticky.mri.dev\sites\all\modules\mri_sticky_control\mri_sticky_control.module">
+			<todo name="TODO: Wenn mit mehreren Inhalstypen gearbeitet werden soll, dann wird noch eine Lösung benötigt, wie" pos="1;1"/>
+			<todo name="TODO: PRÜFE OB ES NOCH MINDESTENS EINE STICKY NODE GIBT  WENN NICHT - Dann führe WARNUNG AUS./Wenn j" pos="7;48"/>
+			<todo name="TODO: Umwandlung namen von content Types in maschinensprachen namen in funktion" pos="3;149"/>
+			<todo name="TODO: HIER WEITER: Aus der DB muss der scinfotype string geladen werden." pos="1;298"/>
+		</todofile>
+	</todoblock>
+	<dbgurls>
+		<url name="http://localhost:8080/sticky.mri.dev/"/>
+		<url name="http://localhost:8080/sticky.mri.dev/admin/content"/>
+		<url name="http://localhost:8080/sticky.mri.dev/node/add/article"/>
+	</dbgurls>
+	<filescache>
+		<file name="C:\xampp\htdocs\sticky.mri.dev\sites\all\modules\mri_sticky_control\mri_sticky_control.module" crc="1510841463"/>
+		<file name="C:\xampp\htdocs\sticky.mri.dev\sites\all\modules\mri_sticky_control\mri_sticky_control.install" crc="1510833035"/>
+		<file name="C:\xampp\htdocs\sticky.mri.dev\sites\all\modules\mri_sticky_control\mri_sticky_control.info" crc="1510335785"/>
+	</filescache>
+</project>

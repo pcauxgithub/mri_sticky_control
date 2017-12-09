@@ -1,0 +1,34 @@
+<codestructure version="5.13">
+<phptree>
+<treenode node="mri_sticky_control_config_form_submit;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;126;1;137;;;;vpos;;v;;r&#10;Definition&#10;    mri_sticky_control_config_form_submit($form, $form_state)&#10;&#10;Description&#10;     Submit Function handles actions if the config form was submitted&#10;&#10;Parameters:&#10;    undefined $form&#10;    undefined $form_state;;d67,126;;b0,0;;mundefined $form;;pundefined $form_state;;p">
+</treenode>
+<treenode node="mri_sticky_control_config_form_validate;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;247;1;249;;;;vpos;;v;;r;;d51,247;;b0,0;;m">
+</treenode>
+<treenode node="mri_sticky_control_form_alter;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;9;1;14;;;;vpos;;v;;r;;d70,9;;b0,0;;mform;;pform_state;;pform_id;;p">
+</treenode>
+<treenode node="mri_sticky_control_form_conf;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;60;1;114;;;;vpos;;v;;r;;d60,60;;b0,0;;mform;;pform_state;;p">
+</treenode>
+<treenode node="mri_sticky_control_get_config_query;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;188;1;195;;;;vpos;;v;;r&#10;Definition&#10;    mri_sticky_control_get_config_query()&#10;&#10;Description&#10;     Get the Config Data returns the query to get the config data in table mri_sticky_conf;;d47,188;;b0,0;;m">
+</treenode>
+<treenode node="mri_sticky_control_get_observed_contenttypes;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;196;1;210;;;;vpos;;v;;r;;d56,196;;b0,0;;m">
+</treenode>
+<treenode node="mri_sticky_control_help;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;2;1;4;;;;vpos;;v;;r;;d46,2;;b0,0;;mpath;;parg;;p">
+</treenode>
+<treenode node="mri_sticky_control_install;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.install;f0;2;1;10;;;;vpos;;v;;r;;d37,2;;b0,0;;m">
+</treenode>
+<treenode node="mri_sticky_control_load_config_data;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;150;1;179;;;;vpos;;v;;r&#10;Definition&#10;    mri_sticky_control_load_config_data()&#10;&#10;Description&#10;     Load Config Data from DB. At first load, default Datas will be used.;;d47,150;;b0,0;;m">
+</treenode>
+<treenode node="mri_sticky_control_menu;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;38;1;56;;;;vpos;;v;;r;;d35,38;;b0,0;;m">
+</treenode>
+<treenode node="mri_sticky_control_perm;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;6;1;8;;;;vpos;;v;;r;;d35,6;;b0,0;;m">
+</treenode>
+<treenode node="mri_sticky_control_schema;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.install;f0;21;1;93;;;;vpos;;v;;r&#10;Definition&#10;    mri_sticky_control_schema()&#10;&#10;Description&#10;     Implements hook Schema;;d36,21;;b0,0;;m">
+</treenode>
+<treenode node="mri_sticky_control_uninstall;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.install;f0;12;1;14;;;;vpos;;v;;r;;d39,12;;b0,0;;m">
+</treenode>
+<treenode node="mri_sticky_control_write_conf_data;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;218;1;245;;;;vpos;;v;;r&#10;Definition&#10;    mri_sticky_control_write_conf_data($form_state)&#10;&#10;Description&#10;     Write Config Data into DB&#10;&#10;Parameters:&#10;    undefined $form_state;;d57,218;;b0,0;;mundefined $form_state;;p">
+</treenode>
+<treenode node="the_callback_function;PHP:Function Name;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;f0;16;1;36;;;;vpos;;v;;r;;d52,16;;b0,0;;mform;;pform_state;;p">
+</treenode>
+</phptree>
+</codestructure>
