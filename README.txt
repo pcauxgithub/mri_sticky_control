@@ -1,6 +1,5 @@
 MRI Sticky Control
 
-
 What does the Module do:
 The Module ensures that a definable content type always has exactly one node with the attribute "sticky".
 The module ensures also the following things:
