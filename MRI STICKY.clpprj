@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\MRI STICKY.clpprj">
+	<settings><PM_URL><![CDATA[http://webform.localhost/admin/content]]></PM_URL><PM_HOME_URL><![CDATA[http://webform.localhost/admin/content]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";"/><added value=""/><lastopfiles>
+	</lastopfiles>
+	<errors version="5.11">
+	</errors>
+	<cakedata>
+	</cakedata>
+	<dplmenupath>
+		<drupalfile name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module">
+			<pathfunc path="admin/config/mri/sticky-control/config" data="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;mri_sticky_control_form_conf;9;11;47;11;"/>
+			<pathfunc path="admin/config/sticky-control/config" data="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;mri_sticky_control_form_conf;10;39;44;39;"/>
+			<pathfunc path="mri/st/ip-anonymizer" data="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;mri_webform_ano_form_conf;9;11;29;11;"/>
+			<pathfunc path="mri/sticky-control/config" data="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;mri_sticky_control_form_conf;9;11;34;11;"/>
+			<pathfunc path="mri/sticky-control/ip-anonymizer" data="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;mri_webform_ano_form_conf;9;11;41;11;"/>
+			<pathfunc path="test" data="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;mri_sticky_control_form_conf;10;47;14;47;"/>
+		</drupalfile>
+	</dplmenupath><laravael>
+	</laravael><smartyassings>
+	</smartyassings><twigtemplate>
+	</twigtemplate><yiidata>
+	</yiidata>
+	<todoblock>
+		<todofile name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module">
+			<todo name="TODO: Wenn mit mehreren Inhalstypen gearbeitet werden soll, dann wird noch eine Lösung benötigt, wie" pos="1;1"/>
+			<todo name="TODO: Umwandlung namen von content Types in maschinensprachen namen in funktion" pos="3;61"/>
+			<todo name="TODO: HIER WEITER: Aus der DB muss der scinfotype string geladen werden." pos="1;140"/>
+		</todofile>
+	</todoblock>
+	<dbgurls>
+	</dbgurls>
+	<filescache>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\nbproject\private\private.xml" crc="1511003803"/>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\nbproject\project.xml" crc="1511003403"/>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module" crc="1511048791"/>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.install" crc="1511048363"/>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.info" crc="1510335785"/>
+	</filescache>
+</project>
