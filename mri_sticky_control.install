@@ -1,17 +1,10 @@
 <?php
 
 function mri_sticky_control_install(){
-<<<<<<< HEAD
-
-=======
-/*	   db_insert('mri_sticky_conf')
-  ->fields(array(
-      'scct' => 'none',
-      'scemtype'=> 'none',
-      'scinfotypel_testmode' => 'none',
-      'scnid' => 'none',
-    ))->execute();*/
->>>>>>> 657592023a7dc929e7ea4c56fe173096de1adbaf
+	watchdog('mri_sticky_control', 'MRI Sticky Control was installed.');
+/*	watchdog('mri_sticky_control', 
+         'Attempt to go to nonexistent transition (from %old to %new)', 
+         array('%old' => $old_sid, '%new' => $sid), WATCHDOG_ERROR);*/
 }
 
 function mri_sticky_control_uninstall(){
@@ -69,11 +62,7 @@ function mri_sticky_control_schema(){
   //'primary key' => array('wmaid'),
   );
   
-<<<<<<< HEAD
 /* $schema['mri_sticky_nodes'] = array(
-=======
- $schema['mri_sticky_nodes'] = array(
->>>>>>> 657592023a7dc929e7ea4c56fe173096de1adbaf
   'description' => 'List of all sticky nodes of the selected content type(s), where defined in the module config mask.',
   'fields' => array(
     'scniid' => array(
@@ -96,12 +85,7 @@ function mri_sticky_control_schema(){
       'default' => 'none'),     
     ),
   'primary key' => array('scniid'),
-<<<<<<< HEAD
   );*/
-  echo "test";
-=======
-  );
-  
->>>>>>> 657592023a7dc929e7ea4c56fe173096de1adbaf
+
   return $schema;
 }

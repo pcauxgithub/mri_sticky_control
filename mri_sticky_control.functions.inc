@@ -64,6 +64,7 @@ function mri_sticky_control_write_conf_data($form_state) {
         'scinfotype'=> $checkboxOptions_infoType,
       ))->execute();
     drupal_set_message("Config Params are successfully saved.");
+    watchdog('mri_sticky_control', 'MRI Sticky Control config form - Config Params are successfully saved..');
   }
 }
 

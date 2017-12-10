@@ -7,7 +7,18 @@
 * 
 * @return
 */
-require('mri_sticky_control.functions');
+//require('mri_sticky_control.functions.inc');
+/**
+ * Implements hook_cron().
+ */
+function mri_sticky_control_cron() {
+  if (variable_get('sticky_content_check_cron', TRUE)) {
+  	watchdog('mri_sticky_control', 'MRI Sticky Control Cron - Check if an sticky Node in System available.');
+    module_load_include('inc', 'mri_sticky_control', 'mri_sticky_control.functions');
+    //TODO: Check if a Sticky node in System abailable. Create a Function
+    //Es könnte auf alle erdenklichen Wegen Nodes gelöscht worden sein. Hier wird mittels Cron geprüft ob Nodes vorhanden sind.
+  }
+}
 
 function mri_sticky_control_help($path, $arg) {
 
@@ -45,6 +56,7 @@ function mri_sticky_control_menu() {
     'access callback'=> TRUE,
     'access arguments' => array('mri sticky view control config permissions'),
     'type'           => MENU_NORMAL_ITEM,
+    'file' => 'mri_sticky_control.functions.inc',
   );
   return $items;
 }
@@ -57,6 +69,7 @@ function mri_sticky_control_menu() {
 * @return
 */
 function mri_sticky_control_form_node_delete_confirm_alter(&$form, &$form_state, $form_id) {
+	module_load_include('inc', 'mri_sticky_control', 'mri_sticky_control.functions');
   $observedCT = mri_sticky_control_get_observed_contenttypes(); //get a list of observed content type
   if($form['#node']->type == $observedCT ) { 
     $form['actions']['submit']['#submit'][] = '_observed_content_type_will_be_del';
@@ -70,6 +83,7 @@ function mri_sticky_control_form_node_delete_confirm_alter(&$form, &$form_state,
 * @return
 */
 function _observed_content_type_will_be_del($form, &$form_state) {	
+	module_load_include('inc', 'mri_sticky_control', 'mri_sticky_control.functions');
 	$observedCT = mri_sticky_control_get_observed_contenttypes();
 	$nodeList = node_load_multiple(array(), array('type' => $observedCT, 'sticky' => '1', 'status' => '1'));
 	$nodeCounter = 0;
@@ -115,7 +129,7 @@ function _observed_content_type_will_be_del($form, &$form_state) {
 			$node->sticky = '1';   
 	    // Save the updated node
 	    node_save($node);
-	    drupal_set_message('Die zuletzt veröffentilchte Node des Typs <em>'.$observedCT.'</em> wurde auf Sticky gesetzt.', 'error');
+	    drupal_set_message('Die zuletzt veröffentlichte Node des Typs <em>'.$observedCT.'</em> wurde auf Sticky gesetzt.', 'error');
 	    node_delete($nodeToDel);
 		}
 		else {
@@ -126,6 +140,7 @@ function _observed_content_type_will_be_del($form, &$form_state) {
 }
 
 function mri_sticky_control_set_other_nodes_unsticky($nidOfNewStickyNode) {
+	module_load_include('inc', 'mri_sticky_control', 'mri_sticky_control.functions');
 	$observedCT = mri_sticky_control_get_observed_contenttypes();
 	$nodeList = node_load_multiple(array(), array('type' => $observedCT, 'sticky' => '1', 'status' => '1'));
 	$i = 0;
@@ -153,6 +168,7 @@ function mri_sticky_control_set_other_nodes_unsticky($nidOfNewStickyNode) {
 * @return
 */
 function mri_sticky_control_form_alter(&$form, $form_state, $form_id) {
+	module_load_include('inc', 'mri_sticky_control', 'mri_sticky_control.functions');
 	$observedCT = mri_sticky_control_get_observed_contenttypes(); //get a list of observed content type
   if( $form_id == $observedCT. '_node_form' ) { 
     $form['actions']['submit']['#submit'][] = '_observed_content_type_will_be_saved';
@@ -168,6 +184,7 @@ function mri_sticky_control_form_alter(&$form, $form_state, $form_id) {
 * @return
 */
 function _observed_content_type_will_be_saved($form, &$form_state) {	
+	module_load_include('inc', 'mri_sticky_control', 'mri_sticky_control.functions');
 	$observedCT = mri_sticky_control_get_observed_contenttypes();
 	$nodeList = node_load_multiple(array(), array('type' => $observedCT, 'sticky' => '1', 'status' => '1'));
   if ($nodeList != NULL) { //in the System is min. 1 node available, with the attributes "published" and "sticky" of the observed content types 
@@ -270,6 +287,7 @@ function mri_sticky_control_form_conf($form, & $form_state) {
 
 function mri_sticky_control_config_form_submit($form, $form_state) {
 	if (user_access('mri sticky edit control config permissions')) {
+		module_load_include('inc', 'mri_sticky_control', 'mri_sticky_control.functions');
 		if ($form_state['values']['content_types'] != 'none') {
 	    //variable_set('example_ip', $form_state['values']['example_ip']);
 	  }
@@ -282,6 +300,7 @@ function mri_sticky_control_config_form_submit($form, $form_state) {
 	}
 	else {
 		drupal_set_message(t('Edit Permission missing. The config form could not be viewed.'), 'error');
+		watchdog('mri_sticky_control', 'MRI Sticky Control config form - Edit Permission missing.');
 	}  
 }
 
@@ -293,6 +312,7 @@ function mri_sticky_control_config_form_submit($form, $form_state) {
 * @return
 */
 function mri_sticky_control_load_config_data() {
+	module_load_include('inc', 'mri_sticky_control', 'mri_sticky_control.functions');
   $query = mri_sticky_control_get_config_query();
   $result= NULL;
   $config_settings = array();
