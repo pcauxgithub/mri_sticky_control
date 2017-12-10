@@ -9,8 +9,7 @@ The module ensures also the following things:
 		If the only sticky node is set to unsticky, the contribution is saved as "sticky". The editor receives a message on the screen.
 		If a sticky node is deleted and there are other published nodes of the type, then the latest published node automatically gets the sticky status.
 		If a sticky node is deleted and there are only unpublished nodes of the type, automatically the most up-to-date node receives the sticky status.
-		If a sticky node is deleted and there are no other nodes of the type, the node is not deleted. The editor receives a message on the screen.
-		In addition, will
+		If a sticky node should be deleted and there are no other nodes of the type in System, then the node is not deleted. The editor receives a message on the screen.
 
 Problems and Procedures:
 There are many different ways to delete nodes. Batches, deleting nodes by other modules (e.g., rules), etc.
@@ -21,7 +20,6 @@ E-mail notifications can be configured in addition to the on-screen messages.
 Watchdog connection available.
 Automated tests planned.
 
-
 Was das Modul tut:
 Ein frei definierbarer Inhaltstyp verfügt immer über genau eine Node mit dem Attribut "sticky".
 Das Modul stellt folgende Dinge sicher:
@@ -31,8 +29,8 @@ Das Modul stellt folgende Dinge sicher:
 		Wird bei der einzigen Sticky Node auf unsticky gesetzt, so wird der Beitrag als "sticky" gespeichert. Der Redakteur erhält einen Hinweis auf dem Bildschirm.
 		Wird eine sticky Node gelöscht und es existieren noch andere veröffentlichte Nodes des Typs, so erhält automatisch die aktuellste veröffentlichte Node den sticky Status. 
 		Wird eine sticky Node gelöscht und es existieren ausschließlich unveröffentlichte Nodes des Typs, so erhält automatisch die aktuellste Node den sticky Status. 
-		Wird eine sticky Node gelöscht und es existiert keine andere Nodes des Typs, so wird die Node nicht gelöscht. Der Redakteur erhält einen Hinweis auf dem Bildschirm.
-		Zudem wird
+		Soll eine sticky Node gelöscht werden, und es existiert keine andere Nodes des Typs, so wird die Node nicht gelöscht. Der Redakteur erhält einen Hinweis auf dem Bildschirm.
+
 	
 Probleme und Verfahrensweisen:
 Es existieren viele verschiedene Methoden um Nodes zu löschen. Stapelverarbeitungen, löschen von Nodes durch andere Module (z.B. Rules) etc. 

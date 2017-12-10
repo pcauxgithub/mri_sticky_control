@@ -7,7 +7,16 @@
 * 
 * @return
 */
-require('mri_sticky_control.functions');
+//require('mri_sticky_control.functions.inc');
+/**
+ * Implements hook_cron().
+ */
+function mri_sticky_control_cron() {
+  if (variable_get('sticky_content_check_cron', TRUE)) {
+    module_load_include('inc', 'mri_sticky_control', 'mri_sticky_control.functions');
+    example_process_users();
+  }
+}
 
 function mri_sticky_control_help($path, $arg) {
 
@@ -45,6 +54,7 @@ function mri_sticky_control_menu() {
     'access callback'=> TRUE,
     'access arguments' => array('mri sticky view control config permissions'),
     'type'           => MENU_NORMAL_ITEM,
+    'file' => 'mri_sticky_control.functions.inc',
   );
   return $items;
 }
@@ -153,6 +163,7 @@ function mri_sticky_control_set_other_nodes_unsticky($nidOfNewStickyNode) {
 * @return
 */
 function mri_sticky_control_form_alter(&$form, $form_state, $form_id) {
+	module_load_include('inc', 'mri_sticky_control', 'mri_sticky_control.functions');
 	$observedCT = mri_sticky_control_get_observed_contenttypes(); //get a list of observed content type
   if( $form_id == $observedCT. '_node_form' ) { 
     $form['actions']['submit']['#submit'][] = '_observed_content_type_will_be_saved';
@@ -168,6 +179,7 @@ function mri_sticky_control_form_alter(&$form, $form_state, $form_id) {
 * @return
 */
 function _observed_content_type_will_be_saved($form, &$form_state) {	
+	module_load_include('inc', 'mri_sticky_control', 'mri_sticky_control.functions');
 	$observedCT = mri_sticky_control_get_observed_contenttypes();
 	$nodeList = node_load_multiple(array(), array('type' => $observedCT, 'sticky' => '1', 'status' => '1'));
   if ($nodeList != NULL) { //in the System is min. 1 node available, with the attributes "published" and "sticky" of the observed content types 
@@ -293,6 +305,7 @@ function mri_sticky_control_config_form_submit($form, $form_state) {
 * @return
 */
 function mri_sticky_control_load_config_data() {
+	module_load_include('inc', 'mri_sticky_control', 'mri_sticky_control.functions');
   $query = mri_sticky_control_get_config_query();
   $result= NULL;
   $config_settings = array();
