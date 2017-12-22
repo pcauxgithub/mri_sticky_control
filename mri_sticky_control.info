@@ -6,5 +6,5 @@ core = 7.x
 files[] = mri_sticky_control.test
 files[] = mri_sticky_control.module
 files[] = mri_sticky_control.install
-
+files[] = mri_sticky_control.functions
 

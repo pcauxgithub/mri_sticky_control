@@ -1,6 +1,7 @@
 <?php
 
 function mri_sticky_control_install(){
+
 	watchdog('mri_sticky_control', 'MRI Sticky Control was installed.');
 /*	watchdog('mri_sticky_control', 
          'Attempt to go to nonexistent transition (from %old to %new)', 

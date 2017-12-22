@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\MRI Sticky Control.clpprj">
+<<<<<<< HEAD
 	<removed value=";"/><added value="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\README.md;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.functions;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.test;"/><lastopfiles>
 		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.test"/>
 		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.info"/>
@@ -8,6 +9,14 @@
 		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.functions.inc"/>
 		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.install"/>
 		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\README.md"/>
+=======
+	<removed value=";"/><added value="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.functions;D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.test;"/><lastopfiles>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.test"/>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.functions"/>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.info"/>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\README.txt"/>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module"/>
+>>>>>>> debc1f1acbb78dbb67a0d8eaf45d37c73c2caea9
 	</lastopfiles>
 	<errors version="5.11">
 	</errors>
@@ -16,7 +25,11 @@
 	<dplmenupath>
 		<drupalfile name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module">
 			<pathfunc path="admin/config/mri/sticky-control/config" data="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;mri_sticky_control_form_conf;9;11;47;11;"/>
+<<<<<<< HEAD
 			<pathfunc path="admin/config/sticky-control/config" data="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;mri_sticky_control_form_conf;10;50;44;50;"/>
+=======
+			<pathfunc path="admin/config/sticky-control/config" data="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;mri_sticky_control_form_conf;10;48;44;48;"/>
+>>>>>>> debc1f1acbb78dbb67a0d8eaf45d37c73c2caea9
 			<pathfunc path="mri/st/ip-anonymizer" data="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;mri_webform_ano_form_conf;9;11;29;11;"/>
 			<pathfunc path="mri/sticky-control/config" data="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;mri_sticky_control_form_conf;9;11;34;11;"/>
 			<pathfunc path="mri/sticky-control/ip-anonymizer" data="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module;mri_webform_ano_form_conf;9;11;41;11;"/>
@@ -37,12 +50,20 @@
 		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\nbproject\private\private.xml" crc="1511003803"/>
 		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\nbproject\project.xml" crc="1511003403"/>
 		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\README.txt" crc="1512856665"/>
+<<<<<<< HEAD
 		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\README.md" crc="1513273918"/>
 		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.test" crc="1512864143"/>
 		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module" crc="1513274379"/>
 		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.install" crc="1512867590"/>
 		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.info" crc="1512864340"/>
 		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.functions.inc" crc="1512868040"/>
+=======
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.test" crc="1510304850"/>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.module" crc="1512861762"/>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.install" crc="1512788798"/>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.info" crc="1512855244"/>
+		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\mri_sticky_control.functions" crc="1511244671"/>
+>>>>>>> debc1f1acbb78dbb67a0d8eaf45d37c73c2caea9
 		<file name="D:\xampp\htdocs\webform\sites\all\modules\mri_sticky_control\CHANGELOG.txt" crc="1512783843"/>
 	</filescache>
 </project>
