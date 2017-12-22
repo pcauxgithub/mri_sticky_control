@@ -1,4 +1,5 @@
 <?php
+//TODO: Bug BUG: erstelle node > sticky modus aber unveröffentlicht. Konsequenz: Veröffentlichte Sticky Node wird unsticky, neue unveröffentlichte Node bleibt unveröffentlicht.
 //TODO: Wenn mit mehreren Inhalstypen gearbeitet werden soll, dann wird noch eine Lösung benötigt, wie die inhaltstypen gespeichert werden sollten. Die derzeitige Lösung sieht vor, alle maschinen sprachen bezeichnungen aller typen in einem datenfeld abzulegen, nämlich in scct. Komma getrennt. Geht, schöner wäre allerdings eine eigene Konfiguration pro Inhaltstyp. Das wird möglich durch einen Tuple pro CT in der Basistabelle.
 /**
 * 
